@@ -11,9 +11,22 @@
 }
 .App .content {
   background: #e1e1e2;
-  padding: 20px;
+  padding: 20px 20px 80px 20px;
   width: 800px;
   margin: 0 auto;
+}
+.App .content .date-picker {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App .content .date-picker .react-datepicker-wrapper {
+  margin: 0 0 0 10px;
+}
+.App .content .date-picker .react-datepicker-wrapper input {
+  height: 26px;
+  font-size: 14px;
+  width: 120px;
 }
 .App .content .card h2 {
   font-size: 24px;
@@ -24,14 +37,33 @@
 }
 .App .content .card .media {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .App .content .card .media > p {
   line-height: 22px;
   text-align: justify;
+  width: 100%;
 }
-.App .content .card .media img {
-  width: 25%;
+.App .content .card .media .image {
+  width: 60%;
   margin: 0 0 0 30px;
+}
+.App .content .card .media .image img {
+  width: 100%;
+}
+.App .content .error {
+  font-size: 20px;
+  padding: 80px 0 50px;
+  color: crimson;
+}
+.App footer .footer {
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  background: black;
+  color: white;
 }
 .spinner {
   height: 20vh;

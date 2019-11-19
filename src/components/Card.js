@@ -3,7 +3,6 @@ import Media from "./Card/Media";
 import Date from "./Card/Date";
 
 const Card = props => {
-  console.log(props);
   return (
     <div className="card">
       <h2>{props.nasa.title}</h2>

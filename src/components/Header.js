@@ -8,7 +8,7 @@ const Header = () => {
           src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"
           alt="Nasa Logo"
         />
-        <h1>NASA Daily Bulletin</h1>
+        <h1>Picture of the Day</h1>
       </div>
     </header>
   );
