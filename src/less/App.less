@@ -21,16 +21,45 @@
     background: #e1e1e2;
     padding: 20px 20px 80px 20px;
     .width-mixin();
-    .date-picker {
+
+    .navigation {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      .react-datepicker-wrapper {
-        margin: 0 0 0 10px;
-        input {
-          height: 26px;
-          font-size: 14px;
-          width: 120px;
+      .next-prev {
+        button {
+          padding: 5px 15px;
+          background: white;
+          color: black;
+          font-size: 13px;
+          border: 0;
+          border-bottom: 2px solid #333;
+          border-radius: 4px;
+          margin: 0 0 0 10px;
+          &:disabled {
+            color: grey;
+            border-bottom: 2px solid #777;
+          }
+        }
+      }
+      .date-picker {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .react-datepicker-wrapper {
+          margin: 0 0 0 10px;
+          input {
+            font-size: 13px;
+            width: 120px;
+            padding: 5px 15px;
+            border: 0;
+            border-bottom: 2px solid #333;
+            border-radius: 4px;
+            &:disabled {
+              color: grey;
+              border-bottom: 2px solid #777;
+            }
+          }
         }
       }
     }
@@ -61,9 +90,28 @@
       }
     }
     .error {
-      font-size: 20px;
-      padding: 80px 0 50px;
-      color: crimson;
+      margin: 80px 0 50px;
+      border: 1px solid red;
+      background: rgba(255, 0, 0, 0.1);
+      padding: 0 20px;
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        line-height: 24px;
+        font-size: 16px;
+        button {
+          cursor: pointer;
+          text-decoration: underline;
+          font-size: 16px;
+          display: inline-block;
+          border: 0;
+          background: inherit;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
   footer {

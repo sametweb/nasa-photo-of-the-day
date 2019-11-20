@@ -15,18 +15,44 @@
   width: 800px;
   margin: 0 auto;
 }
-.App .content .date-picker {
+.App .content .navigation {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.App .content .date-picker .react-datepicker-wrapper {
+.App .content .navigation .next-prev button {
+  padding: 5px 15px;
+  background: white;
+  color: black;
+  font-size: 13px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  border-radius: 4px;
   margin: 0 0 0 10px;
 }
-.App .content .date-picker .react-datepicker-wrapper input {
-  height: 26px;
-  font-size: 14px;
+.App .content .navigation .next-prev button:disabled {
+  color: grey;
+  border-bottom: 2px solid #777;
+}
+.App .content .navigation .date-picker {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.App .content .navigation .date-picker .react-datepicker-wrapper {
+  margin: 0 0 0 10px;
+}
+.App .content .navigation .date-picker .react-datepicker-wrapper input {
+  font-size: 13px;
   width: 120px;
+  padding: 5px 15px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  border-radius: 4px;
+}
+.App .content .navigation .date-picker .react-datepicker-wrapper input:disabled {
+  color: grey;
+  border-bottom: 2px solid #777;
 }
 .App .content .card h2 {
   font-size: 24px;
@@ -53,9 +79,28 @@
   width: 100%;
 }
 .App .content .error {
+  margin: 80px 0 50px;
+  border: 1px solid red;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 0 20px;
+}
+.App .content .error h2 {
   font-size: 20px;
-  padding: 80px 0 50px;
-  color: crimson;
+}
+.App .content .error p {
+  line-height: 24px;
+  font-size: 16px;
+}
+.App .content .error p button {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 16px;
+  display: inline-block;
+  border: 0;
+  background: inherit;
+}
+.App .content .error p button:hover {
+  text-decoration: none;
 }
 .App footer .footer {
   width: 800px;
