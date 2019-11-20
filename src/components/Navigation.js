@@ -17,14 +17,14 @@ const Navigation = props => {
         <button
           type="button"
           disabled={props.nasa.loading ? "disabled" : null}
-          onClick={() => props.handleDateChange(props.nasa.date, "yesterday")}
+          onClick={() => props.handleDateChange(props.nasa.date, "daybefore")}
         >
           &larr; Previous Day
         </button>
         <button
           type="button"
           disabled={props.nasa.loading ? "disabled" : null}
-          onClick={() => props.handleDateChange(props.nasa.date, "tomorrow")}
+          onClick={() => props.handleDateChange(props.nasa.date, "dayafter")}
         >
           Next Day &rarr;
         </button>

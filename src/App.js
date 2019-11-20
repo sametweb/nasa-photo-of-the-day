@@ -50,14 +50,14 @@ const App = () => {
   };
 
   const handleDateChange = (date, to = "") => {
-    to === "yesterday"
+    to === "daybefore"
       ? setNasa({
           ...nasa,
           date: new Date(new Date(date).setDate(new Date(date).getDate() - 1)),
           loading: true,
           error: false
         })
-      : to === "tomorrow"
+      : to === "dayafter"
       ? setNasa({
           ...nasa,
           date: new Date(new Date(date).setDate(new Date(date).getDate() + 1)),
@@ -87,7 +87,7 @@ const App = () => {
             <h2>{nasa.errorMessage}</h2>
             <p>
               We had trouble retrieving the information from NASA servers.
-              Please try again with a different time selection. Remember the
+              Please try again with a different date selection. Remember, the
               earliest NASA Picture of the Day entry is on
               <button
                 onClick={() =>
