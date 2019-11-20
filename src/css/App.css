@@ -4,6 +4,7 @@
 .App header .header {
   width: 800px;
   margin: 0 auto;
+  box-shadow: #aaa 0 10px 60px;
   display: flex;
   background: black;
   color: white;
@@ -14,6 +15,7 @@
   padding: 20px 20px 80px 20px;
   width: 800px;
   margin: 0 auto;
+  box-shadow: #aaa 0 10px 60px;
 }
 .App .content .navigation {
   display: flex;
@@ -105,6 +107,7 @@
 .App footer .footer {
   width: 800px;
   margin: 0 auto;
+  box-shadow: #aaa 0 10px 60px;
   padding: 30px 0;
   text-align: center;
   background: black;
