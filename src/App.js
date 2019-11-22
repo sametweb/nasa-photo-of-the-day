@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./css/App.css";
 import "react-datepicker/dist/react-datepicker.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Card from "./components/Card";
+import ErrorPage from "./components/Card/ErrorPage";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -81,26 +83,7 @@ const App = () => {
         {nasa.loading ? (
           <div className="spinner"></div>
         ) : nasa.error ? (
-          <div className="error">
-            <h2>{nasa.errorMessage}</h2>
-            <p>
-              We had trouble retrieving the information from NASA servers.
-              Please try again with a different date selection. Remember, the
-              earliest NASA Picture of the Day entry is on
-              <button
-                onClick={() =>
-                  setNasa({
-                    ...nasa,
-                    date: new Date("1995-06-17"),
-                    loading: true,
-                    error: false
-                  })
-                }
-              >
-                June 16, 1995!
-              </button>
-            </p>
-          </div>
+          <ErrorPage nasa={nasa} setNasa={setNasa} />
         ) : (
           <Card nasa={nasa.response} />
         )}

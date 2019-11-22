@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
   width: 800px;
   margin: 0 auto;
   box-shadow: #aaa 0 10px 60px;
-  display: flex;
   background: black;
   padding: 20px;
   color: white;

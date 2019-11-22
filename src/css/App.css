@@ -21,6 +21,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding: 0 0 25px 0;
+  border-bottom: 1px solid #ccc;
 }
 .App .content .navigation .next-prev button {
   padding: 5px 15px;
@@ -55,6 +57,11 @@
 .App .content .navigation .date-picker .react-datepicker-wrapper input:disabled {
   color: grey;
   border-bottom: 2px solid #777;
+}
+.App .content .card {
+  background-color: inherit;
+  border: 0;
+  padding: 25px 0 0 0;
 }
 .App .content .card h2 {
   font-size: 24px;
