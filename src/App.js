@@ -46,7 +46,7 @@ const App = () => {
           response: {},
           loading: false,
           error: true,
-          errorMessage: `${error.response.data.code}: ${error.response.data.msg}`
+          errorMessage: `Error ${error.response.data.code}: ${error.response.data.msg}`
         })
       );
   };
@@ -80,6 +80,7 @@ const App = () => {
           setNasa={setNasa}
           handleDateChange={handleDateChange}
         />
+        <hr />
         {nasa.loading ? (
           <div className="spinner"></div>
         ) : nasa.error ? (

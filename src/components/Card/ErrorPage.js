@@ -1,16 +1,19 @@
 import React from "react";
-import { Card, CardTitle, CardText } from "reactstrap";
+import { Alert } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ErrorPage = ({ nasa, setNasa }) => {
   return (
-    <Card body inverse color="danger">
-      <CardTitle>{nasa.errorMessage}</CardTitle>
-      <CardText>
-        We had trouble retrieving the information from NASA servers. Please try
-        again with a different date selection. Remember, the earliest NASA
-        Picture of the Day entry is on
-        <div
+    <Alert color="danger">
+      <h4 className="alert-heading">{nasa.errorMessage}!</h4>
+      <p>We had trouble retrieving the information from NASA servers.</p>
+      <hr />
+      <p className="mb-0">
+        Please try again with a different date selection. Remember, the earliest
+        NASA Picture of the Day entry is on{" "}
+        <a
+          href="#"
+          className="alert-link"
           onClick={() =>
             setNasa({
               ...nasa,
@@ -21,9 +24,9 @@ const ErrorPage = ({ nasa, setNasa }) => {
           }
         >
           June 16, 1995!
-        </div>
-      </CardText>
-    </Card>
+        </a>
+      </p>
+    </Alert>
   );
 };
 

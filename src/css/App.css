@@ -21,8 +21,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 0 25px 0;
-  border-bottom: 1px solid #ccc;
 }
 .App .content .navigation .next-prev button {
   padding: 5px 15px;
