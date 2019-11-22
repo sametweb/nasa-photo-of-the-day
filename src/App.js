@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./css/App.css";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
-//Components
+
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Card from "./components/Card";
@@ -69,11 +69,9 @@ const App = () => {
 
   useEffect(getNasaData, [nasa.date]);
 
-  console.log("My State", nasa);
   return (
     <div className="App">
       <Header />
-
       <section className="content">
         <Navigation
           nasa={nasa}

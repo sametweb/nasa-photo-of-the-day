@@ -11,8 +11,11 @@ const Date = ({ date }) => {
 
   if (date) {
     let dateArray = date.split("-");
-    let dateObj = { y: dateArray[0], m: dateArray[1], d: dateArray[2] };
-    dateObj.m = monthReplacer(dateObj.m);
+    let dateObj = {
+      y: dateArray[0],
+      m: monthReplacer(dateArray[1]),
+      d: dateArray[2]
+    };
     finalDateFormat = `${dateObj.m} ${dateObj.d}, ${dateObj.y}`;
   }
 

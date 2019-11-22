@@ -1,17 +1,17 @@
 import React from "react";
 
-const Media = props => {
-  return props.type === "image" ? (
+const Media = ({ type, url, title }) => {
+  return type === "image" ? (
     <div className="image">
-      <img src={props.url} alt={props.title} />
+      <img src={url} alt={title} />
     </div>
-  ) : props.type === "video" ? (
+  ) : type === "video" ? (
     <div className="video">
       <iframe
-        title={props.title}
+        title={title}
         width="560"
         height="315"
-        src={props.url}
+        src={url}
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
