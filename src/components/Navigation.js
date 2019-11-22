@@ -5,7 +5,7 @@ const Navigation = props => {
   return (
     <div className="navigation">
       <div className="date-picker">
-        Go to this date:
+        Select date:
         <DatePicker
           disabled={props.nasa.loading ? "disabled" : null}
           dateFormat="yyyy-MM-dd"

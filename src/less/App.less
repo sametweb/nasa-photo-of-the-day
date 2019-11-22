@@ -1,7 +1,12 @@
+@tablet: ~"(max-width: 800px)";
+
 .width-mixin() {
   width: 800px;
   margin: 0 auto;
   box-shadow: #aaa 0 10px 60px;
+  @media @tablet {
+    width: 100%;
+  }
 }
 
 * {
@@ -9,7 +14,9 @@
 }
 
 .App {
+  margin: 0 auto;
   header {
+    width: 100%;
     .header {
       .width-mixin();
       display: flex;
@@ -27,7 +34,15 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      @media @tablet {
+        flex-direction: column;
+        align-items: stretch;
+      }
       .next-prev {
+        @media @tablet {
+          display: flex;
+          justify-content: space-between;
+        }
         button {
           padding: 5px 15px;
           background: white;
@@ -37,6 +52,12 @@
           border-bottom: 2px solid #333;
           border-radius: 4px;
           margin: 0 0 0 10px;
+          @media @tablet {
+            width: 48%;
+            height: 50px;
+            font-size: 18px;
+            margin: 0;
+          }
           &:disabled {
             color: grey;
             border-bottom: 2px solid #777;
@@ -47,8 +68,18 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        @media @tablet {
+          margin: 0 0 20px 0;
+          flex-direction: column;
+          justify-content: center;
+          font-size: 18px;
+        }
         .react-datepicker-wrapper {
           margin: 0 0 0 10px;
+          @media @tablet {
+            margin: 0;
+            width: 50%;
+          }
           input {
             font-size: 13px;
             width: 120px;
@@ -56,6 +87,13 @@
             border: 0;
             border-bottom: 2px solid #333;
             border-radius: 4px;
+            text-align: center;
+            @media @tablet {
+              font-size: 18px;
+              padding: 5px 25px;
+              width: 100%;
+              height: 50px;
+            }
             &:disabled {
               color: grey;
               border-bottom: 2px solid #777;
@@ -87,9 +125,17 @@
         .image {
           width: 60%;
           margin: 0 0 0 30px;
+          @media @tablet {
+            width: 100%;
+            margin: 0 20px;
+          }
           img {
             width: 100%;
           }
+        }
+        .video {
+          max-width: 400px;
+          max-height: 225px;
         }
       }
     }

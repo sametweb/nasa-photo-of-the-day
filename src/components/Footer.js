@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterWrapper = styled.div`
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   box-shadow: #aaa 0 10px 60px;
   padding: 30px 0;
